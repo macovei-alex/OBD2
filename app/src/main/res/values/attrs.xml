@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GaugeView">
+        <attr name="minValue" format="float" />
+        <attr name="maxValue" format="float" />
+        <attr name="roundValueToInt" format="boolean" />
+        <attr name="needleColor" format="color" />
+        <attr name="wheelColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="unitOfMeasure" format="string" />
+    </declare-styleable>
+</resources>

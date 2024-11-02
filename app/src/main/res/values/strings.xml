@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Obd2</string>
+    <string name="speed">Speed</string>
+    <string name="engine_temperature">Engine Temperature</string>
+    <string name="rpm">Engine RPM</string>
+    <string name="mass_airflow">Mass Airflow</string>
+    <string name="throttle_position">Throttle Position</string>
+    <string name="instant_fuel_consumption">Instantaneous Fuel Consumption</string>
+</resources>
