@@ -73,8 +73,7 @@ public class GaugeActivity extends AppCompatActivity {
                 OBDCommands.ENGINE_TEMPERATURE, findViewById(R.id.gvEngineTemperature),
                 OBDCommands.THROTTLE_POSITION, findViewById(R.id.gvThrottlePosition),
                 OBDCommands.MASS_AIRFLOW, findViewById(R.id.gvMassAirflow),
-                OBDCommands.INSTANTANEOUS_FUEL_CONSUMPTION, findViewById(R.id.gvInstantFuelConsumption),
-                OBDCommands.Opel.DPF_DIFFERENTIAL_PRESSURE, findViewById(R.id.gvDPFDifferentialPressure)
+                OBDCommands.INSTANTANEOUS_FUEL_CONSUMPTION, findViewById(R.id.gvInstantFuelConsumption)
         );
         commandToViewMap.forEach((command, view) -> {
             if (!(view instanceof GaugeView)) {
