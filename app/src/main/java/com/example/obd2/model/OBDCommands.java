@@ -62,37 +62,6 @@ public abstract class OBDCommands {
             }
     );
 
-    public static final class Opel {
 
-        public static final OBDCommand DISTANCE_SINCE_LAST_DPF_REGENERATION = new OBDCommand(
-                "distance since last dpf regeneration",
-                0,
-                65535,
-                "km",
-                "223039\r",
-                (data) -> (data.a * 256) + data.b
-        );
-
-        public static final OBDCommand DPF_DIFFERENTIAL_PRESSURE = new OBDCommand(
-                "dpf differential pressure",
-                -128,
-                127,
-                "kPa",
-                "2220F4\r",
-                (data) -> data.a
-        );
-
-        public static final OBDCommand CALCULATED_DPF_FLOW = new OBDCommand(
-                "calculated dpf flow",
-                0,
-                2.55f,
-                "kPa",
-                "2220F5\r",
-                (data) -> data.a / 100.0f
-        );
-    }
-
-
-    private OBDCommands() {
-    }
+    private OBDCommands() {}
 }

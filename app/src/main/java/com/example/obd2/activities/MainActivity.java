@@ -143,6 +143,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        startActivityForResult(enableBluetoothIntent, 101);
+        super.startActivityForResult(enableBluetoothIntent, 101);
     }
 }

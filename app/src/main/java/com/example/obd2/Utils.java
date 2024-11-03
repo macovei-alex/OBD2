@@ -35,26 +35,6 @@ public abstract class Utils {
     }
 
 
-    public static <T> boolean contains(T[] array, T value) {
-        for (T t : array) {
-            if (t.equals(value)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
-    public static <T> int indexOf(T[] array, T value) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].equals(value)) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-
     public static <T> int reverseIndexOf(T[] array, T value) {
         for (int i = array.length - 1; i >= 0; i--) {
             if (array[i].equals(value)) {

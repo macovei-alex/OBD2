@@ -9,10 +9,7 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
-
-import androidx.annotation.NonNull;
 
 import com.example.obd2.R;
 
@@ -93,7 +90,7 @@ public class GaugeView extends View implements OBDCommandView {
 
 
     @Override
-    public void onDraw(@NonNull Canvas canvas) {
+    public void onDraw(Canvas canvas) {
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(wheelColor);
         canvas.drawArc(arcRect, startAngle, -sweepAngle, false, paint);
@@ -148,7 +145,6 @@ public class GaugeView extends View implements OBDCommandView {
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
         int size = Math.min(width, height);
-        super.onMeasure(size, size);
         super.setMeasuredDimension(size, size);
 
         // Log.d(TAG, String.format("onMeasure(%d, %d)", width, height));
@@ -158,13 +154,13 @@ public class GaugeView extends View implements OBDCommandView {
     @Override
     public void onSizeChanged(int width, int height, int oldWidth, int oldHeight) {
         int size = Math.min(width, height);
-        super.onSizeChanged(size, size, oldWidth, oldHeight);
         updateRectangle(0, 0, size, size);
 
         // Log.d(TAG, String.format("onSizeChanged(%d, %d, %d, %d)", width, height, oldWidth, oldHeight));
     }
 
 
+    @SuppressWarnings("SameParameterValue")
     private void updateRectangle(int left, int top, int right, int bottom) {
         arcRect.left = left + strokeWidth;
         arcRect.top = top + strokeWidth;
@@ -208,12 +204,5 @@ public class GaugeView extends View implements OBDCommandView {
         lineAngle = angle;
         lineEnd.x = lineStart.x + lineLength * (float) Math.cos(Math.toRadians(angle));
         lineEnd.y = lineStart.y + lineLength * (float) Math.sin(Math.toRadians(angle));
-    }
-
-
-    private int getColorFromTheme(Context context, int attribute) {
-        TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(attribute, typedValue, true);
-        return typedValue.data;
     }
 }
