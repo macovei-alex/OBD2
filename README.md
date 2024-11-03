@@ -1,7 +1,7 @@
 # OBD2 Android App
 
-<img src="./assets/main_activity.jpeg" alt="Main activity" width=300 height=300 />
-<img src="./assets/gauge_activity.jpeg" alt="Gauge activity" width=300 height=300 />
+<img src="./assets/main_activity.jpeg" alt="Main activity" width=300 />
+<img src="./assets/gauge_activity.jpeg" alt="Gauge activity" width=300 />
 
 ## Overview
 This app is a simple Android-based OBD2 (On-Board Diagnostics) application designed to read vehicle data and display it in real time. The app connects to the vehicle’s OBD2 port via a Bluetooth adapter and displays key information on a customizable dashboard with a few basic gauges.
